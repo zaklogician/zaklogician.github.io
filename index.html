@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Zoltan A. Kocsis - existence.property</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+                <link rel="icon" type="image/png" href="images/favicon.png">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="content">
+							<div class="inner">
+								<img src="images/logo.png" alt="Existence Property" style="padding-bottom: 0.3em;">
+								<p>The Personal Website of Dr. Zoltan A. Kocsis</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#cv">CV</a></li>
+								<li><a href="#news">News</a></li>
+								<li><a href="#life">Hobbies</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="images/pic_about.jpg" alt="A selfie I took in the desert" /></span>
+								<p>I work in the <a href="https://ts.data61.csiro.au/">Trustworthy Systems Research Group</a> of CSIRO, Australia's national science research agency. I use techniques from Mathematical Logic to help developers create trustworthy software and hardware that comes with security, safety and reliability guarantees.</p>
+
+								<p>I obtained my PhD in Mathematics at the University of Manchester in October 2019, under the supervision of <a href="http://borovik.net/">Prof. Alexandre Borovik</a>. My thesis explores algebraic applications of Internal Set Theory, an axiomatic set theory developed by Edward Nelson as a foundation for Nonstandard Analysis. I also made some contributions to the theory of degrees of satisfiability in Probabilistic Group Theory, and to the theory of Search-based Optimization in Computer Science. I have 16 refereed publications in international journals and conferences (listed in my CV). Click the buttons below to find out more about my interests!</p>
+									<ul class="actions">
+										<li><a href="#math" class="button">Mathematical Curiosities</a></li>
+									</ul>
+							</article>
+							
+						<!-- CV -->
+							<article id="cv">
+								<h2 class="major">CV / Résumé</h2>
+                                                                <iframe src="./cv.html"
+                                                                width="100%"
+                                                                height="300px"
+                                                                scrolling="auto"
+                                                                frameborder="no"
+                                                                style="background-color: #eee8d5;">
+                                                                </iframe>
+									<ul class="actions">
+										<li><a href="cv.html" class="button">Print CV</a></li>
+									</ul>
+							</article>
+
+						<!-- Math -->
+							<article id="math">
+								<h2 class="major">Mathematical Curiosities</h2>
+								<span class="image main"><img src="images/pic_homology.png" alt="Geometry of pseudo-random sequences" /></span>
+
+								<h3 class="minor">Pseudo-Randomness and Homology</h3>
+								<p> Which one of these three point clouds can we get by sampling the unit cube using a pseudo-random sequence? Surprisingly, the answer is any one of them, depending on the sequence we use. We used three sequences to sample the same manifold: the unit cube, which has one connected component and no holes. However, the first two sequences fail to yield a uniform sample. In the first case (RANDU), the resulting point cloud seemingly consists of 15 separate connected components. In the second case (XorShift64, scaled), there is only one component, but it has many holes. Using persistent homology, one can rigorously define the Betti numbers of <em>point samples</em>, and investigate their relationship to the Betti numbers of the sampled manifold. In my honors thesis I classified some pseudorandom sequences based on their ability to reflect the topological properties of the manifolds they sample.</p>
+
+								<span class="image main"><img src="images/pic_degsat.png" alt="Degree of Primality diagram for the number 45" /></span>
+								<h3 class="minor">Degree of Satisfiability</h3>
+								<p> Which non-Abelian group is closest to being Abelian? Which composite number is farthest from being prime? Such questions can be formulated and answered using the theory of Degree of Satisfiability (and result in striking visual arrangements that feature heavily on this web page). The degree of satisfiability of a logical formula <em>φ(x,y)</em> is the probability that <em>φ(a,b)</em> holds for uniformly randomly chosen <em>a,b</em>. A famous theorem of Gustafson states that the degree of satisfiability of the equality <em>xy=yx</em> is at most 5/8 in a non-Abelian group, with equality obtained in the Quaternion Group. Hence, one can say that the Quaternion Group is closest to being Abelian among all the non-Abelian groups. The degree of satisfiability of equations in infinite groups gives significant information about algebraic structure, e.g. about virtual properties. I proved results about the <a href="https://arxiv.org/abs/2002.01773">degree of satisfiability of some special equations</a>, and introduced criteria to identify which equations hold in a finite index subgroup precisely if they have positive degree of satisfiability.</p>
+
+								<h3 class="minor">PhD Thesis</h3>
+								<p>My PhD thesis (available <a href="https://www.research.manchester.ac.uk/portal/en/theses/development-of-group-theory-in-the-language-of-internal-set-theory(2f333784-a511-4c85-a7e2-812cc14e6067).html">here</a>) explores two novel algebraic applications of Internal Set Theory. I prove that every profinite group admits a finite approximation in the sense of Zilber, and my main result shows that well-behaved actions of the approximating group on a compact manifold give rise to similarly well-behaved actions of periodic subgroups of the approximated group on the same manifold. Motivated by the extraction of computational bounds from proofs in a pure fragment of IST, I devise a pure presentation of sheaves over topological spaces in the style of Robinson and prove it equivalent to the usual definition over standard objects. By introducing a non-standard extension of Martin-Löf Type Theory I <a href="https://github.com/zaklogician/agda-ist-algebra">formally verified my results using the Agda proof assistant</a>.</p>
+							</article>
+
+						<!-- News -->
+							<article id="news">
+								<h2 class="major">News and Media</h2>
+								<span class="image main"><img src="images/pic_spined.png" alt="Diagram in a spined category" /></span>
+
+								<h3 class="minor">Upcoming: 26 Apr 2021</h3>
+								<p>I'll be presenting new results on <a href="https://arxiv.org/abs/2002.01773">degree of satisfiability</a> at the CSIRO Trustworthy Systems seminar.</p>
+
+								<h3 class="minor">31 Mar 2021</h3>
+								<p>Ben Bumpus presented our joint work on <a href="https://arxiv.org/abs/2104.01841">Spined Categories</a> at the <a href="https://intranet.csc.liv.ac.uk/~bctcs2021/talks/29/">37th British Colloquium for Theoretical Computer Science</a>.</p>
+							</article>
+
+
+						<!-- Life -->
+							<article id="life">
+								<h2 class="major">Hobbies</h2>
+
+
+<span class="image main"><img src="images/pic_survival.jpg" alt="Bushcraft Survival Training" /></span>
+				
+								<p>Having grown up in the semi-rural outskirts of a Central/Eastern European metropolis, I'm equally comfortable with big city and wilderness adventures. On my day off, you're just as likely to find me among the wide streets and dense urban skyscrapers of the Sydney CBD as in the coastal bushlands of New South Wales. In the city, Central Park and Bucket Boys Darling Square are among my favorite hangouts. In the bush, I'm partial to the trails of Ku-ring-gai Chase National Park.</p>
+								<p>I love public speaking and being on stage: I was a member of <a href="https://www.orators.org.uk/manchester-orators/">Manchester Orators</a>, a chartered club for public speaking, presentation and leadership, between 2017 and 2019. I also have an interest in remote area first aid, rescue and recovery: I hold the basic Bushcraft Survival Australia certificate, and I am training to qualify for the State Emergency Service's BSAR team.</p>
+
+<span class="image main"><img src="images/pic_beer.jpg" alt="Craft beer" /></span>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+<p>If you have any question, or if you wish to hire me as a consultant, use the email address below. You can also find me on the <a href="https://math.stackexchange.com/users/645935/z-a-k">Mathematics Stack Exchange</a> and on <a href="https://www.semanticscholar.org/author/Zoltan-A.-Kocsis/32463628">Semantic Scholar</a>.</p>
+
+<span class="image main"><img src="images/cim.png" alt="Contact: first name at this domain" /></span>
+							</article>
+
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Zoltan A. Kocsis 2020</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
