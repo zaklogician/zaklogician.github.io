@@ -146,7 +146,7 @@
 			<script>
 function makeCaptcha() {
 	console.log("Ran make-captcha");
-	var result = Math.floor(1000 * (Math.random() + 1));
+	var result = Math.floor(1000 * (Math.random() + 2));
 	document.getElementById("captcha-challenge").innerHTML = result.toString();
 }
 
