@@ -1,0 +1,14 @@
+
+#captcha-challenge {
+  font-weight: bold;
+  color: #cb4b16;
+}
+
+#captcha-solved {
+  font-weight: bold;
+  animation: fadeIn linear 4s;
+  -webkit-animation: fadeIn linear 4s;
+  -moz-animation: fadeIn linear 4s;
+  -o-animation: fadeIn linear 4s;
+  -ms-animation: fadeIn linear 4s;
+}

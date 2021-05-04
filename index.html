@@ -10,10 +10,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/captcha.css" />
                 <link rel="icon" type="image/png" href="images/favicon.png">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body onload="makeCaptcha()" class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -116,7 +117,8 @@
 								<h2 class="major">Contact</h2>
 <p>If you have any question, or if you wish to hire me as a consultant, use the email address below. You can also find me on the <a href="https://math.stackexchange.com/users/645935/z-a-k">Mathematics Stack Exchange</a> and on <a href="https://www.semanticscholar.org/author/Zoltan-A.-Kocsis/32463628">Semantic Scholar</a>.</p>
 
-<span class="image main"><img src="images/cim.png" alt="Contact: first name at this domain" /></span>
+<p id="captcha-body">To find out my email address, enter the number <span id="captcha-challenge">----</span> below: <input type="text" id="captcha-input" onkeydown = "if (event.keyCode == 13) submitCaptcha();" name="captcha-entry"> <button id="captcha-reveal" onClick="submitCaptcha()">Reveal</button>  
+</p>
 							</article>
 
 
@@ -126,7 +128,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Zoltan A. Kocsis 2020</p>
+						<p class="copyright">&copy; Zoltan A. Kocsis 2020-2021</p>
 					</footer>
 
 			</div>
@@ -140,6 +142,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<!-- CAPTCHA Script -->
+			<script>
+function makeCaptcha() {
+	console.log("Ran make-captcha");
+	var result = Math.floor(1000 * (Math.random() + 1));
+	document.getElementById("captcha-challenge").innerHTML = result.toString();
+}
+
+function submitCaptcha() {
+	console.log("Ran submit-captcha");
+	console.log(document.getElementById("captcha-challenge").innerHTML);
+	console.log(document.getElementById("captcha-input").value);
+	var expected = parseInt(document.getElementById("captcha-challenge").innerHTML);
+	var actual = parseInt(document.getElementById("captcha-input").value);
+	document.getElementById("captcha-input").value = "";
+	var d = expected-actual+42;
+	var email = String.fromCharCode(80+d,69+d,66+d,74+d,55+d,68+d,22+d,59+d,78+d,63+d,73+d,74+d,59+d,68+d,57+d,59+d,4+d,70+d,72+d,69+d,70+d,59+d,72+d,74+d,79+d);
+	console.log(email);
+	if (email.includes("@")) {
+		document.getElementById("captcha-body").innerHTML = "".concat('<input type="text" name="captcha-solved" value="', email, '"readonly />');
+	} else { makeCaptcha(); }
+}
+			</script>
 
 	</body>
 </html>
