@@ -50,13 +50,20 @@ Welcome to my website! I'm Zoltan, a mathematical logician and educator based in
 </p>
 
 <p>
-Here, you can find information about my research and teaching, as well as links to my selected publications. I might occasionally use this space to share updates, musings, and other observations about work and life too.
+Read about:
+<ul>
+    <li><a href="#math_degs">Finite algebra and degree of satisfiability</a></li>
+    <li><a href="#math_strd">Structured decompositions</a></li>
+    <li><a href="#math_nstd">Nonstandard analysis</a></li>
+    <li><a href="#math_prot">Proof theory and type theory</a></li>
+</ul>
 </p>
-									<ul class="actions">
-										<li><a href="#math" class="button">Mathematics</a></li>
 
-										<li><a href="#life" class="button">Hobbies</a></li>
+									<ul class="actions">
+										<li><a href="#news" class="button">News</a></li>
 										<li><a href="#cv" class="button">CV / Résumé</a></li>
+										<li><a href="#contact" class="button">Contact</a></li>
+										<li><a href="#life" class="button">Hobbies</a></li>
 									</ul>
 							</article>
 							
@@ -75,20 +82,191 @@ Here, you can find information about my research and teaching, as well as links 
 									</ul>
 							</article>
 
-						<!-- Math -->
-							<article id="math">
-								<h2 class="major">Mathematical Interests</h2>
-								<span class="image main"><img src="images/pic_homology.png" alt="Geometry of pseudo-random sequences" /></span>
+						<!-- Math: Nonstandard -->
+							<article id="math_nstd">
+								<h2 class="major">Nonstandard Analysis</h2>
+								<span class="image main"><img src="images/pic_nonstd.png" alt="Nonstandard analysis allows us to take infinite limits of finite structures, and to approximate infinite structures via finite ones" /></span>
 
-								<h3 class="minor">Pseudo-Randomness and Homology</h3>
-								<p> Which one of these three point clouds can we get by sampling the unit cube using a pseudo-random sequence? Surprisingly, the answer is any one of them, depending on the sequence we use. We used three sequences to sample the same manifold: the unit cube, which has one connected component and no holes. However, the first two sequences fail to yield a uniform sample. In the first case (RANDU), the resulting point cloud seemingly consists of 15 separate connected components. In the second case (XorShift64, scaled), there is only one component, but it has many holes. Using persistent homology, one can rigorously define the Betti numbers of <em>point samples</em>, and investigate their relationship to the Betti numbers of the sampled manifold. In my honors thesis I classified some pseudorandom sequences based on their ability to reflect the topological properties of the manifolds they sample, and developed an algorithm that can test for failures of uniformity by calculating persistent homology groups of the samples..</p>
+								<h3 class="minor">Internal Set Theory</h3>
+<p>
+My PhD thesis (available <a href="https://www.research.manchester.ac.uk/portal/en/theses/development-of-group-theory-in-the-language-of-internal-set-theory(2f333784-a511-4c85-a7e2-812cc14e6067).html">here</a>)
+explores two novel algebraic applications of Nelson's Internal Set Theory, a syntactic
+framework for nonstandard analysis.
+</p>
+<p>
+In my thesis, I propose an explicitly topological formalism of structural
+approximation of groups, generalizing previous work by Gordon and Zilber.
+Using this new formalism, one can show that every profinite group admits a finite approximation in the
+sense of Zilber, and prove various results about LEF groups. My main result states that well-behaved actions of the approximating group on a
+compact manifold give rise to similarly well-behaved actions of periodic subgroups of the
+approximated group on the same manifold. The theorem generalizes earlier results on discrete circle actions,
+and gives partial non-approximability results for SO(3).
+</p>
+<p>
+Formulating and proving results about continuous functions in a so-called "pure" fragment of
+Internal Set Theory allows us to extract various computational bounds from them syntactically. I showed that
+sheaves over topological spaces also admit such a "pure" presentation, equivalent to the usual definition over standard objects.
+</p>
+<p>
+By introducing a non-standard (and very much non-constructive) extension of Martin-Löf Type Theory
+with a hierarchy of universes for external propositions along with an external standardness predicate,
+I was able to <a href="https://github.com/zaklogician/agda-ist-algebra">formally verify my results using the Agda proof assistant</a>.
+</p>
+							</article>
 
-								<span class="image main"><img src="images/pic_degsat.png" alt="Degree of Primality diagram for the number 45" /></span>
-								<h3 class="minor">Degree of Satisfiability</h3>
-								<p> Which non-Abelian group is closest to being Abelian? Which composite number is farthest from being prime? Such questions can be formulated and answered using the theory of Degree of Satisfiability (and result in striking visual arrangements that feature heavily on this web page). The degree of satisfiability of a logical formula <em>φ(x,y)</em> is the probability that <em>φ(a,b)</em> holds for uniformly randomly chosen <em>a,b</em>. A famous theorem of Gustafson states that the degree of satisfiability of the equality <em>xy=yx</em> is at most 5/8 in a non-Abelian group, with equality obtained in the Quaternion Group. Hence, one can say that the Quaternion Group is closest to being Abelian among all the non-Abelian groups. The degree of satisfiability of equations in infinite groups gives significant information about algebraic structure, e.g. about virtual properties. I proved results about the <a href="https://arxiv.org/abs/2002.01773">degree of satisfiability of some special equations</a>, and introduced criteria to identify which equations hold in a finite index subgroup precisely if they have positive degree of satisfiability.</p>
+						<!-- Math: Degree of Sat -->
+							<article id="math_degs">
+								<h2 class="major">Degree of Satisfiability</h2>
+								<span class="image main"><img src="images/pic_degsat.png" alt="Degree of primality diagram for the number 45" /></span>
 
-								<h3 class="minor">PhD Thesis</h3>
-								<p>My PhD thesis (available <a href="https://www.research.manchester.ac.uk/portal/en/theses/development-of-group-theory-in-the-language-of-internal-set-theory(2f333784-a511-4c85-a7e2-812cc14e6067).html">here</a>) explores two novel algebraic applications of Internal Set Theory. I prove that every profinite group admits a finite approximation in the sense of Zilber, and my main result shows that well-behaved actions of the approximating group on a compact manifold give rise to similarly well-behaved actions of periodic subgroups of the approximated group on the same manifold. This generalizes earlier results of Manevitz and Weinberger on circle actions to a large class of groups. Motivated by the extraction of computational bounds from proofs in a pure fragment of IST, I devised a pure presentation of sheaves over topological spaces in the style of Robinson and proved it equivalent to the usual definition over standard objects. By introducing a non-standard extension of Martin-Löf Type Theory I <a href="https://github.com/zaklogician/agda-ist-algebra">formally verified my results using the Agda proof assistant</a>.</p>
+								<h3 class="minor">The idea</h3>
+<p>
+Which non-Abelian group is closest to being Abelian? Which composite number is farthest from being prime?
+Such questions can be formulated and answered using the theory of Degree of Satisfiability (and result in
+striking visual arrangements that feature heavily on this website). Degree of satisfiability
+has connections to <a href="https://en.wikipedia.org/wiki/Property_testing">property testing</a> and
+black-box algebraic structures.
+</p>
+<p>
+The <em>degree of satisfiability</em> of a logical formula φ(x,y) is the probability that φ(a,b) holds for
+uniformly randomly chosen values a,b. An interesting phenomenon occurs: for many formulas, the degree of
+satisfiability is either exactly 1, or else much less than 1. While infinite algebraic structures don't
+usually come equipped with a notion of uniform distribution, degree of satisfiability nonetheless
+generalizes well both to virtually nilpotent infinite groups, and to LEF structures.
+</p>
+								<h3 class="minor">Heyting algebras</h3>
+<p>
+<em>Heyting algebras:</em> in our article,
+<a href="https://arxiv.org/abs/2002.01773">Degree of satisfiability in Heyting algebras</a>, Ben Bumpus and I
+characterized all the 1-variable equations in Heyting algebras according to their degree of satisfiability.
+In particular, we showed that the equation p∨¬p=1 has satisfiability gap 1/3: if a Heyting algebra is not
+Boolean, then at least 1/3 of its elements fail to satisfy the law of excluded middle! As a corollary, we also
+get that all infinite T0-separable topological spaces, except for the discrete ones, have more non-closed
+open sets than clopen sets. Recently, Charles Evans obtained <a href="https://arxiv.org/abs/2209.13704">similar
+results</a> for BCK-algebras as well.
+</p>
+
+								<h3 class="minor">Groups</h3>
+<p>
+In <a href="https://arxiv.org/abs/2002.01773">Degree of satisfiability of some special equations</a>,
+I showed that the equations xyy=yyx, xyyy=yyyx and yxy=x (as well as an infinite family of others
+obtained from these) have satisfiability gaps. I also introduced a simple criterion to identify which
+equations hold in a finite index subgroup of an infinite group precisely if they have positive degree of
+satisfiability.
+</p>
+							</article>
+
+
+
+						<!-- Math: Persistent Homology -->
+							<article id="math_perh">
+								<h2 class="major">Psuedo-randomness and Homology</h2>
+								<span class="image main"><img src="images/pic_homology.png" alt="Degree of primality diagram for the number 45" /></span>
+
+								<h3 class="minor">The idea</h3>
+<p> Which one of these three point clouds can we get by sampling the unit cube using a pseudo-random
+sequence? Surprisingly, the answer is any one of them, depending on the sequence we use! Above, I used
+three different pseudo-random number generators to sample points from the cube, and got three
+drastically different results.
+</p>
+<p>As a topological manifold, the unit cube has one connected component, and no holes. However, the sample
+obtained using the first pseudo-random number generator above (the infamous RANDU) seemingly consists of
+15 or so separate connected components. In the second sample (XorShift64, scaled), there is only one
+component, but the sample still looks like the union of multiple planes, enclosing many holes.
+</p>
+								<h3 class="minor">Persistent Homology</h3>
+<p>
+Using persistent homology, one can rigorously define the Betti numbers of <em>point samples</em>,
+and investigate their relationship to the Betti numbers of the sampled manifold. In my honours thesis
+(University of Stirling, 2016; available on request) I classified some pseudorandom sequences based on
+their ability to reflect the topological properties of the manifolds they sample, and developed an
+algorithm that can test for failures of uniformity by calculating persistent homology groups of the samples.
+This can be seen as an alternative to the spectral test for the assessment of the quality of uniformity of
+d-dimensional points that remains stable under small perturbations of the generator. The thesis also
+contains an alternative proof of the Cohen-Steiner, Edelsbrunner, Harer result on the stability of
+persistence diagrams.
+</p>
+							</article>
+
+
+						<!-- Math: Structured Decompositions -->
+							<article id="math_strd">
+								<h2 class="major">Structured Decompositions</h2>
+								<span class="image main"><img src="images/pic_treewidth.png" alt="An abstract setting for treewidth" /></span>
+
+								<h3 class="minor">Treewidth</h3>
+<p>
+One can define the treewidth of an undirected graph in several equivalent ways: e.g. as the size of the largest set of vertices
+that occur in all tree decompositions of the graph, or as  the maximum order of connected subgraphs that
+touch each other, i.e. brambles.
+</p>
+								<h3 class="minor">Spined categories</h3>
+<p>
+In our article, <a href="https://arxiv.org/abs/2104.01841">Spined categories: generalizing tree-width beyond graphs</a>
+Ben Bumpus and I obtained a new characterization of treewidth as a functor preserving <em>proxy pushout</em>
+structure on a category of unordered graphs. We obtained a whole bunch of categories which admit
+tree-width-like invariants, allowing us to recover hypergraph tree-width and complemented tree-width
+using the same consrtuction.
+</p>
+								<h3 class="minor">Structured decompositions</h3>
+<p>
+Graphs of bounded treewidth often come up when examining the parametrized complexity of graph algorithms.
+The idea is to find graph invariants k so that the complexity of an otherwise intractable algorithm depends only
+polynomially on the size of the input graph, but may depend exponentially on the value of the invariant invariant k.
+Many families of graph algorithms that have been studied in detail display fixed-parameter tractability,
+i.e. can run in polynomial time on graphs of fixed bounded treewidth. In joint work with
+Ben Bumpus and Jade Master, we introduce the notion of
+<a href="https://arxiv.org/abs/2207.06091">structured decompositions</a>, which provide a categorial
+setting for the study of fixed-parameter tractability, including the ability to define generic algorithms,
+and yields generalizations of many combinatorial invariants such as layered tree-width and graph
+decomposition width. The resulting decompositions also have striking similarity to graphs of groups
+familiar from Bass-Serre theory.
+</p>
+							</article>
+
+
+
+						<!-- Math: Proof Theory -->
+							<article id="math_prot">
+								<h2 class="major">Proof Theory</h2>
+								<span class="image main"><img src="images/pic_prooft.png" alt="A proof net, and mustard watches" /></span>
+
+								<h3 class="minor">Internal Type Theory</h3>
+<p>
+Nonstandard analysis is a rich formalism for analysis that allows us to work directly with infinite and
+infinitesimal ideal objects. Nelson's Internal Set Theory extends ZFC Set Theory with a new predicate
+"is standard", and three new axiom schemata governing it, which allows one to provide a syntactic
+treatment of nonstandard analysis, and to write down an explicit proof-theoretic translation showing the
+conservativity of nonstandard analysis over ordinary set theory. In my PhD thesis
+(available <a href="https://www.research.manchester.ac.uk/portal/en/theses/development-of-group-theory-in-the-language-of-internal-set-theory(2f333784-a511-4c85-a7e2-812cc14e6067).html">here</a>)
+I introduced Internal Type Theory, an extension of Martin-Löf Type Theory largely analogous to
+Nelson's extension of ZFC. This allowed me to verify the main group-theoretic results of my PhD thesis
+using Agda, an interactive proof assistant based on Martin-Löf Type Theory.
+</p>
+	
+								<h3 class="minor">Apartness relations</h3>
+<p>
+Apartness relations are irreflexive, symmetric and cotransitive binary relations. They act dually to
+equivalence relations: instead of saying when two things are the same, they state when two things
+differ. Apartness relations have fundamental importance in constructive algebra: unlike in
+classical mathematics, equivalence relations cannot take their place. In my article,
+<a href="https://arxiv.org/abs/2209.03920">Apartness relations between propositions</a>, 
+I classify all apartness relations definable in propositional logics extending intuitionistic logic, and show that
+one cannot construct non-trivial apartness terms without invoking the weak law of excluded middle, nor
+tight apartness terms without invoking excluded middle. This answers a question of Rijke on the
+correct notion of apartness between propositions. Using parametricity techniques, I also show that
+Martin-Löf Type Theory cannot construct non-trivial apartness relations between propositions.
+</p>
+
+								<h3 class="minor">A unary proof system</h3>
+<p>
+The usual Hilbert system for classical propositional logic uses three axioms and one rule
+of inference, modus ponens. However, the modus ponens rule is binary (requires two premises). In a
+<a href="https://math.stackexchange.com/a/3895991/645935">Math StackExchange</a> answer, I construct a proof system
+that consists only of unary rules. The idea is to use conjunction to emulate three stacks, and have
+each inference rule operate by taking arguments from one of the stacks.
+</p>
+
 							</article>
 
 						<!-- News -->
@@ -203,7 +381,7 @@ Here, you can find information about my research and teaching, as well as links 
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Zoltan A. Kocsis 2020-2021</p>
+						<p class="copyright">&copy; Zoltan A. Kocsis 2020-2023</p>
 					</footer>
 
 			</div>
