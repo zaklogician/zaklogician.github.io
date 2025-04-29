@@ -251,7 +251,7 @@ Apartness relations are irreflexive, symmetric and cotransitive binary relations
 equivalence relations: instead of saying when two things are the same, they state when two things
 differ. Apartness relations have fundamental importance in constructive algebra: unlike in
 classical mathematics, equivalence relations cannot take their place. In my article,
-<a href="https://arxiv.org/abs/2209.03920">Apartness relations between propositions</a>, 
+<a href="https://onlinelibrary.wiley.com/doi/10.1002/malq.202300055">Apartness relations between propositions</a>,
 I classify all apartness relations definable in propositional logics extending intuitionistic logic, and show that
 one cannot construct non-trivial apartness relations between propositions without invoking the weak law of excluded middle, nor
 tight apartness relations between propositions without invoking excluded middle. This answers a question of Rijke on the
@@ -267,6 +267,28 @@ of inference, modus ponens. However, the modus ponens rule is binary (requires t
 that consists only of unary rules. The idea is to use conjunction to emulate three stacks, and have
 each inference rule operate by taking arguments from one of the stacks.
 </p>
+
+								<h3 class="minor">Quantifier-free definitions</h3>
+<p>
+Second-order propositional logic augments ordinary propositional calculus with quantifiers that range
+over propositional variables. They let you say things like
+"<emph>for all propositions P, some property holds</emph>" or "<emph>There exists a proposition P
+such that some property holds</emph>". Any second-order propositional formula in n free propositional
+variables determines an n-ary connective. In classical logic, one can always eliminate such quantifiers,
+but at a cost: the generalization of SAT to
+<a href="https://en.wikipedia.org/wiki/True_quantified_Boolean_formula>quantified Boolean formulas</a>
+constitutes the canonical complete problem for the complexity class PSPACE.
+Intuitionistically, however, one can eliminate only some, and not all quantifiers from second-order
+connectives. Questions about which second-order connectives resist such elimination have been studied since
+Kreisel's 1981 work on his unary "star" connective, <emph>∃Y.P↔(¬Y∨¬¬Y)</emph>. One cannot Kreisel's connective
+to the ordinary quantifier-free connectives of intuitionistic logic. This contrasts with e.g.
+<emph>∃Y.P↔(Y∨¬Y)</emph>, which reduces to  <emph>¬¬P</emph>. In the article
+<a href="https://doi.org/10.1016/j.apal.2025.103555">Proof-theoretic methods in quantifier-free definability</a>
+I introduce syntactic, uniform-interpolant-based arguments for proving quantifier-free nondefinability of
+binary connectives. The introduced methods sharpen the classic results about Kreisel's connective
+as well.
+</p>
+
 
 							</article>
 
