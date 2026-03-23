@@ -18270,7 +18270,10 @@ var _user$project$MTUK_SpeakerCard$viewSpeaker = function (speaker) {
 		if (_p0.ctor === 'Nothing') {
 			return _user$project$MTUK_Util$spinnerGrid;
 		} else {
-			return _elm_lang$html$Html$text(_p0._0);
+			return A2(
+				_evancz$elm_markdown$Markdown$toHtml,
+				{ctor: '[]'},
+				_p0._0);
 		}
 	}();
 	return A2(
@@ -18357,29 +18360,29 @@ var _user$project$MTUK_SpeakerCard$options = {
 };
 var _user$project$MTUK_SpeakerCard$speaker4 = {
 	key: 'speaker4',
-	icon: 'speaker4-icon',
-	name: 'speaker4-name',
+	icon: 'itai-ben-yaacov',
+	name: 'Itaï Ben Yaacov (mini-course)',
 	blob: _elm_lang$core$Maybe$Just(
 		_user$project$MTUK_LocalAPI$get('speaker4'))
 };
 var _user$project$MTUK_SpeakerCard$speaker3 = {
 	key: 'speaker3',
-	icon: 'speaker3-icon',
-	name: 'speaker3-name',
+	icon: 'alex-wilkie',
+	name: 'Alex Wilkie',
 	blob: _elm_lang$core$Maybe$Just(
 		_user$project$MTUK_LocalAPI$get('speaker3'))
 };
 var _user$project$MTUK_SpeakerCard$speaker2 = {
 	key: 'speaker2',
-	icon: 'speaker2-icon',
-	name: 'speaker2-name',
+	icon: 'salma-kuhlmann',
+	name: 'Salma Kuhlmann',
 	blob: _elm_lang$core$Maybe$Just(
 		_user$project$MTUK_LocalAPI$get('speaker2'))
 };
 var _user$project$MTUK_SpeakerCard$speaker1 = {
 	key: 'speaker1',
-	icon: 'speaker1-icon',
-	name: 'speaker1-name',
+	icon: 'charlotte-kestner',
+	name: 'Charlotte Kestner',
 	blob: _elm_lang$core$Maybe$Just(
 		_user$project$MTUK_LocalAPI$get('speaker1'))
 };
