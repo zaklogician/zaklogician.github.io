@@ -160,6 +160,14 @@ a.is-active::after {
     height: auto;
 }
 
+#charlotte-kestner {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  background-image: url(images/head-charlotte-kestner.jpg);
+  background-size: 100%;
+}
+
 #ayse-berkman {
   width: 64px;
   height: 64px;
